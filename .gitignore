@@ -1,0 +1,42 @@
+# === Raw Data (not redistributed via git) ===
+data/raw/
+data/interim/
+data/processed/
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# === Virtual environments ===
+venv/
+.venv/
+env/
+
+# === IDE ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# === OS ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Environment / secrets ===
+.env
+.env.*
+*.pem
+*.key
+
+# === Jupyter ===
+.ipynb_checkpoints/
+
+# === Misc ===
+*.log

@@ -1,0 +1,707 @@
+row_index,district_raw,district_stripped,state_raw,state_stripped,has_whitespace_issue
+0,Nicobars,Nicobars,Andaman & Nicobar Islands,Andaman & Nicobar Islands,False
+1,North & Middle Andaman,North & Middle Andaman,Andaman & Nicobar Islands,Andaman & Nicobar Islands,False
+2,South Andaman,South Andaman,Andaman & Nicobar Islands,Andaman & Nicobar Islands,False
+3,Srikakulam,Srikakulam,Andhra Pradesh,Andhra Pradesh,False
+4,Vizianagaram,Vizianagaram,Andhra Pradesh,Andhra Pradesh,False
+5,Visakhapatnam,Visakhapatnam,Andhra Pradesh,Andhra Pradesh,False
+6,East Godavari,East Godavari,Andhra Pradesh,Andhra Pradesh,False
+7,West Godavari,West Godavari,Andhra Pradesh,Andhra Pradesh,False
+8,Krishna,Krishna,Andhra Pradesh,Andhra Pradesh,False
+9,Guntur,Guntur,Andhra Pradesh,Andhra Pradesh,False
+10,Prakasam,Prakasam,Andhra Pradesh,Andhra Pradesh,False
+11,Sri Potti Sriramulu Nello,Sri Potti Sriramulu Nello,Andhra Pradesh,Andhra Pradesh,False
+12,Y.S.R.,Y.S.R.,Andhra Pradesh,Andhra Pradesh,False
+13,Kurnool,Kurnool,Andhra Pradesh,Andhra Pradesh,False
+14,Anantapur,Anantapur,Andhra Pradesh,Andhra Pradesh,False
+15,Chittoor,Chittoor,Andhra Pradesh,Andhra Pradesh,False
+16,Tawang,Tawang,Arunachal Pradesh,Arunachal Pradesh,False
+17,West Kameng,West Kameng,Arunachal Pradesh,Arunachal Pradesh,False
+18,East Kameng,East Kameng,Arunachal Pradesh,Arunachal Pradesh,False
+19,Papum Pare,Papum Pare,Arunachal Pradesh,Arunachal Pradesh,False
+20,Upper Subansiri,Upper Subansiri,Arunachal Pradesh,Arunachal Pradesh,False
+21,Upper Siang,Upper Siang,Arunachal Pradesh,Arunachal Pradesh,False
+22,Changlang,Changlang,Arunachal Pradesh,Arunachal Pradesh,False
+23,Lower Subansiri,Lower Subansiri,Arunachal Pradesh,Arunachal Pradesh,False
+24,Dibang Valley,Dibang Valley,Arunachal Pradesh,Arunachal Pradesh,False
+25,Lower Dibang Valley,Lower Dibang Valley,Arunachal Pradesh,Arunachal Pradesh,False
+26,Anjaw,Anjaw,Arunachal Pradesh,Arunachal Pradesh,False
+27,East Siang,East Siang,Arunachal Pradesh,Arunachal Pradesh,False
+28,Kra Daadi,Kra Daadi,Arunachal Pradesh,Arunachal Pradesh,False
+29,Kurung Kumey,Kurung Kumey,Arunachal Pradesh,Arunachal Pradesh,False
+30,Lohit,Lohit,Arunachal Pradesh,Arunachal Pradesh,False
+31,Longding,Longding,Arunachal Pradesh,Arunachal Pradesh,False
+32,Namsai,Namsai,Arunachal Pradesh,Arunachal Pradesh,False
+33,Siang,Siang,Arunachal Pradesh,Arunachal Pradesh,False
+34,Tirap,Tirap,Arunachal Pradesh,Arunachal Pradesh,False
+35,West Siang,West Siang,Arunachal Pradesh,Arunachal Pradesh,False
+36,Kokrajhar,Kokrajhar,Assam,Assam,False
+37,Goalpara,Goalpara,Assam,Assam,False
+38,Barpeta,Barpeta,Assam,Assam,False
+39,Morigaon,Morigaon,Assam,Assam,False
+40,Lakhimpur,Lakhimpur,Assam,Assam,False
+41,Dhemaji,Dhemaji,Assam,Assam,False
+42,Tinsukia,Tinsukia,Assam,Assam,False
+43,Dibrugarh,Dibrugarh,Assam,Assam,False
+44,Golaghat,Golaghat,Assam,Assam,False
+45,Dima Hasao,Dima Hasao,Assam,Assam,False
+46,Cachar,Cachar,Assam,Assam,False
+47,Karimganj,Karimganj,Assam,Assam,False
+48,Hailakandi,Hailakandi,Assam,Assam,False
+49,Bongaigaon,Bongaigaon,Assam,Assam,False
+50,Chirang,Chirang,Assam,Assam,False
+51,Kamrup,Kamrup,Assam,Assam,False
+52,Kamrup Metropolitan,Kamrup Metropolitan,Assam,Assam,False
+53,Nalbari,Nalbari,Assam,Assam,False
+54,Baksa,Baksa,Assam,Assam,False
+55,Darrang,Darrang,Assam,Assam,False
+56,Udalguri,Udalguri,Assam,Assam,False
+57,Biswanath,Biswanath,Assam,Assam,False
+58,Charaideo,Charaideo,Assam,Assam,False
+59,Dhubri,Dhubri,Assam,Assam,False
+60,Hojai,Hojai,Assam,Assam,False
+61,Jorhat,Jorhat,Assam,Assam,False
+62,Karbi Anglong,Karbi Anglong,Assam,Assam,False
+63,Majuli,Majuli,Assam,Assam,False
+64,Nagaon,Nagaon,Assam,Assam,False
+65,Sivasagar,Sivasagar,Assam,Assam,False
+66,Sonitpur,Sonitpur,Assam,Assam,False
+67,South Salmara Mancachar,South Salmara Mancachar,Assam,Assam,False
+68,West Karbi Anglong,West Karbi Anglong,Assam,Assam,False
+69,Pashchim Champaran,Pashchim Champaran,Bihar,Bihar,False
+70,Purba Champaran,Purba Champaran,Bihar,Bihar,False
+71,Sheohar,Sheohar,Bihar,Bihar,False
+72,Sitamarhi,Sitamarhi,Bihar,Bihar,False
+73,Madhubani,Madhubani,Bihar,Bihar,False
+74,Supaul,Supaul,Bihar,Bihar,False
+75,Araria,Araria,Bihar,Bihar,False
+76,Kishanganj,Kishanganj,Bihar,Bihar,False
+77,Purnia,Purnia,Bihar,Bihar,False
+78,Katihar,Katihar,Bihar,Bihar,False
+79,Madhepura,Madhepura,Bihar,Bihar,False
+80,Saharsa,Saharsa,Bihar,Bihar,False
+81,Darbhanga,Darbhanga,Bihar,Bihar,False
+82,Muzaffarpur,Muzaffarpur,Bihar,Bihar,False
+83,Gopalganj,Gopalganj,Bihar,Bihar,False
+84,Siwan,Siwan,Bihar,Bihar,False
+85,Saran,Saran,Bihar,Bihar,False
+86,Vaishali,Vaishali,Bihar,Bihar,False
+87,Samastipur,Samastipur,Bihar,Bihar,False
+88,Begusarai,Begusarai,Bihar,Bihar,False
+89,Khagaria,Khagaria,Bihar,Bihar,False
+90,Bhagalpur,Bhagalpur,Bihar,Bihar,False
+91,Banka,Banka,Bihar,Bihar,False
+92,Munger,Munger,Bihar,Bihar,False
+93,Lakhisarai,Lakhisarai,Bihar,Bihar,False
+94,Sheikhpura,Sheikhpura,Bihar,Bihar,False
+95,Nalanda,Nalanda,Bihar,Bihar,False
+96,Patna,Patna,Bihar,Bihar,False
+97,Bhojpur,Bhojpur,Bihar,Bihar,False
+98,Buxar,Buxar,Bihar,Bihar,False
+99,Kaimur (Bhabua),Kaimur (Bhabua),Bihar,Bihar,False
+100,Rohtas,Rohtas,Bihar,Bihar,False
+101,Aurangabad,Aurangabad,Bihar,Bihar,False
+102,Gaya,Gaya,Bihar,Bihar,False
+103,Nawada,Nawada,Bihar,Bihar,False
+104,Jamui,Jamui,Bihar,Bihar,False
+105,Jehanabad,Jehanabad,Bihar,Bihar,False
+106,Arwal,Arwal,Bihar,Bihar,False
+107,Chandigarh,Chandigarh,Chandigarh,Chandigarh,False
+108,Koriya,Koriya,Chhattisgarh,Chhattisgarh,False
+109,Jashpur,Jashpur,Chhattisgarh,Chhattisgarh,False
+110,Raigarh,Raigarh,Chhattisgarh,Chhattisgarh,False
+111,Korba,Korba,Chhattisgarh,Chhattisgarh,False
+112,Janjgir - Champa,Janjgir - Champa,Chhattisgarh,Chhattisgarh,False
+113,Kabeerdham,Kabeerdham,Chhattisgarh,Chhattisgarh,False
+114,Rajnandgaon,Rajnandgaon,Chhattisgarh,Chhattisgarh,False
+115,Mahasamund,Mahasamund,Chhattisgarh,Chhattisgarh,False
+116,Dhamtari,Dhamtari,Chhattisgarh,Chhattisgarh,False
+117,Uttar Bastar Kanker,Uttar Bastar Kanker,Chhattisgarh,Chhattisgarh,False
+118,Narayanpur,Narayanpur,Chhattisgarh,Chhattisgarh,False
+119,Bijapur,Bijapur,Chhattisgarh,Chhattisgarh,False
+120,Balod,Balod,Chhattisgarh,Chhattisgarh,False
+121,Baloda Bazar,Baloda Bazar,Chhattisgarh,Chhattisgarh,False
+122,Balrampur,Balrampur,Chhattisgarh,Chhattisgarh,False
+123,Bastar,Bastar,Chhattisgarh,Chhattisgarh,False
+124,Bemetara,Bemetara,Chhattisgarh,Chhattisgarh,False
+125,Bilaspur,Bilaspur,Chhattisgarh,Chhattisgarh,False
+126,Dantewada,Dantewada,Chhattisgarh,Chhattisgarh,False
+127,Durg,Durg,Chhattisgarh,Chhattisgarh,False
+128,Gariyaband,Gariyaband,Chhattisgarh,Chhattisgarh,False
+129,Kodagaon,Kodagaon,Chhattisgarh,Chhattisgarh,False
+130,Mungeli,Mungeli,Chhattisgarh,Chhattisgarh,False
+131,Raipur,Raipur,Chhattisgarh,Chhattisgarh,False
+132,Sukma,Sukma,Chhattisgarh,Chhattisgarh,False
+133,Surajpur,Surajpur,Chhattisgarh,Chhattisgarh,False
+134,Surguja,Surguja,Chhattisgarh,Chhattisgarh,False
+135,Diu,Diu,Dadra and Nagar Haveli & Daman and Diu,Dadra and Nagar Haveli & Daman and Diu,False
+136,Daman,Daman,Dadra and Nagar Haveli & Daman and Diu,Dadra and Nagar Haveli & Daman and Diu,False
+137,Dadra & Nagar Haveli,Dadra & Nagar Haveli,Dadra and Nagar Haveli & Daman and Diu,Dadra and Nagar Haveli & Daman and Diu,False
+138,North Goa,North Goa,Goa,Goa,False
+139,South Goa,South Goa,Goa,Goa,False
+140,Kachchh,Kachchh,Gujarat,Gujarat,False
+141,Banas Kantha,Banas Kantha,Gujarat,Gujarat,False
+142,Patan,Patan,Gujarat,Gujarat,False
+143,Mahesana,Mahesana,Gujarat,Gujarat,False
+144,Gandhinagar,Gandhinagar,Gujarat,Gujarat,False
+145,Porbandar,Porbandar,Gujarat,Gujarat,False
+146,Amreli,Amreli,Gujarat,Gujarat,False
+147,Anand,Anand,Gujarat,Gujarat,False
+148,Dohad,Dohad,Gujarat,Gujarat,False
+149,Narmada,Narmada,Gujarat,Gujarat,False
+150,Bharuch,Bharuch,Gujarat,Gujarat,False
+151,The Dangs,The Dangs,Gujarat,Gujarat,False
+152,Navsari,Navsari,Gujarat,Gujarat,False
+153,Valsad,Valsad,Gujarat,Gujarat,False
+154,Surat,Surat,Gujarat,Gujarat,False
+155,Tapi,Tapi,Gujarat,Gujarat,False
+156,Ahmadabad,Ahmadabad,Gujarat,Gujarat,False
+157,Aravali,Aravali,Gujarat,Gujarat,False
+158,Bhavnagar,Bhavnagar,Gujarat,Gujarat,False
+159,Botad,Botad,Gujarat,Gujarat,False
+160,Chhota Udaipur,Chhota Udaipur,Gujarat,Gujarat,False
+161,Devbhumi Dwarka,Devbhumi Dwarka,Gujarat,Gujarat,False
+162,Gir Somnath,Gir Somnath,Gujarat,Gujarat,False
+163,Jamnagar,Jamnagar,Gujarat,Gujarat,False
+164,Junagadh,Junagadh,Gujarat,Gujarat,False
+165,Kheda,Kheda,Gujarat,Gujarat,False
+166,Mahisagar,Mahisagar,Gujarat,Gujarat,False
+167,Morbi,Morbi,Gujarat,Gujarat,False
+168,Panch Mahals,Panch Mahals,Gujarat,Gujarat,False
+169,Rajkot,Rajkot,Gujarat,Gujarat,False
+170,Sabar Kantha,Sabar Kantha,Gujarat,Gujarat,False
+171,Surendranagar,Surendranagar,Gujarat,Gujarat,False
+172,Vadodara,Vadodara,Gujarat,Gujarat,False
+173,Panchkula,Panchkula,Haryana,Haryana,False
+174,Ambala,Ambala,Haryana,Haryana,False
+175,Yamunanagar,Yamunanagar,Haryana,Haryana,False
+176,Kurukshetra,Kurukshetra,Haryana,Haryana,False
+177,Kaithal,Kaithal,Haryana,Haryana,False
+178,Karnal,Karnal,Haryana,Haryana,False
+179,Panipat,Panipat,Haryana,Haryana,False
+180,Sonipat,Sonipat,Haryana,Haryana,False
+181,Jind,Jind,Haryana,Haryana,False
+182,Fatehabad,Fatehabad,Haryana,Haryana,False
+183,Sirsa,Sirsa,Haryana,Haryana,False
+184,Hisar,Hisar,Haryana,Haryana,False
+185,Rohtak,Rohtak,Haryana,Haryana,False
+186,Jhajjar,Jhajjar,Haryana,Haryana,False
+187,Mahendragarh,Mahendragarh,Haryana,Haryana,False
+188,Rewari,Rewari,Haryana,Haryana,False
+189,Gurgaon,Gurgaon,Haryana,Haryana,False
+190,Mewat,Mewat,Haryana,Haryana,False
+191,Faridabad,Faridabad,Haryana,Haryana,False
+192,Palwal,Palwal,Haryana,Haryana,False
+193,Bhiwani,Bhiwani,Haryana,Haryana,False
+194,Charkhi Dadri,Charkhi Dadri,Haryana,Haryana,False
+195,Chamba,Chamba,Himachal Pradesh,Himachal Pradesh,False
+196,Kangra,Kangra,Himachal Pradesh,Himachal Pradesh,False
+197,Lahul & Spiti,Lahul & Spiti,Himachal Pradesh,Himachal Pradesh,False
+198,Kullu,Kullu,Himachal Pradesh,Himachal Pradesh,False
+199,Mandi,Mandi,Himachal Pradesh,Himachal Pradesh,False
+200,Hamirpur,Hamirpur,Himachal Pradesh,Himachal Pradesh,False
+201,Una,Una,Himachal Pradesh,Himachal Pradesh,False
+202,Bilaspur,Bilaspur,Himachal Pradesh,Himachal Pradesh,False
+203,Solan,Solan,Himachal Pradesh,Himachal Pradesh,False
+204,Sirmaur,Sirmaur,Himachal Pradesh,Himachal Pradesh,False
+205,Shimla,Shimla,Himachal Pradesh,Himachal Pradesh,False
+206,Kinnaur,Kinnaur,Himachal Pradesh,Himachal Pradesh,False
+207,Kupwara,Kupwara,Jammu & Kashmir,Jammu & Kashmir,False
+208,Badgam,Badgam,Jammu & Kashmir,Jammu & Kashmir,False
+209,Punch,Punch,Jammu & Kashmir,Jammu & Kashmir,False
+210,Rajouri,Rajouri,Jammu & Kashmir,Jammu & Kashmir,False
+211,Kathua,Kathua,Jammu & Kashmir,Jammu & Kashmir,False
+212,Baramula,Baramula,Jammu & Kashmir,Jammu & Kashmir,False
+213,Bandipore,Bandipore,Jammu & Kashmir,Jammu & Kashmir,False
+214,Srinagar,Srinagar,Jammu & Kashmir,Jammu & Kashmir,False
+215,Ganderbal,Ganderbal,Jammu & Kashmir,Jammu & Kashmir,False
+216,Pulwama,Pulwama,Jammu & Kashmir,Jammu & Kashmir,False
+217,Shupiyan,Shupiyan,Jammu & Kashmir,Jammu & Kashmir,False
+218,Anantnag,Anantnag,Jammu & Kashmir,Jammu & Kashmir,False
+219,Kulgam,Kulgam,Jammu & Kashmir,Jammu & Kashmir,False
+220,Doda,Doda,Jammu & Kashmir,Jammu & Kashmir,False
+221,Ramban,Ramban,Jammu & Kashmir,Jammu & Kashmir,False
+222,Kishtwar,Kishtwar,Jammu & Kashmir,Jammu & Kashmir,False
+223,Udhampur,Udhampur,Jammu & Kashmir,Jammu & Kashmir,False
+224,Reasi,Reasi,Jammu & Kashmir,Jammu & Kashmir,False
+225,Jammu,Jammu,Jammu & Kashmir,Jammu & Kashmir,False
+226,Samba,Samba,Jammu & Kashmir,Jammu & Kashmir,False
+227,Garhwa,Garhwa,Jharkhand,Jharkhand,False
+228,Chatra,Chatra,Jharkhand,Jharkhand,False
+229,Kodarma,Kodarma,Jharkhand,Jharkhand,False
+230,Giridih,Giridih,Jharkhand,Jharkhand,False
+231,Deoghar,Deoghar,Jharkhand,Jharkhand,False
+232,Godda,Godda,Jharkhand,Jharkhand,False
+233,Sahibganj,Sahibganj,Jharkhand,Jharkhand,False
+234,Pakur,Pakur,Jharkhand,Jharkhand,False
+235,Dhanbad,Dhanbad,Jharkhand,Jharkhand,False
+236,Bokaro,Bokaro,Jharkhand,Jharkhand,False
+237,Lohardaga,Lohardaga,Jharkhand,Jharkhand,False
+238,Purbi Singhbhum,Purbi Singhbhum,Jharkhand,Jharkhand,False
+239,Palamu,Palamu,Jharkhand,Jharkhand,False
+240,Latehar,Latehar,Jharkhand,Jharkhand,False
+241,Hazaribagh,Hazaribagh,Jharkhand,Jharkhand,False
+242,Ramgarh,Ramgarh,Jharkhand,Jharkhand,False
+243,Dumka,Dumka,Jharkhand,Jharkhand,False
+244,Jamtara,Jamtara,Jharkhand,Jharkhand,False
+245,Ranchi,Ranchi,Jharkhand,Jharkhand,False
+246,Khunti,Khunti,Jharkhand,Jharkhand,False
+247,Gumla,Gumla,Jharkhand,Jharkhand,False
+248,Simdega,Simdega,Jharkhand,Jharkhand,False
+249,Pashchimi Singhbhum,Pashchimi Singhbhum,Jharkhand,Jharkhand,False
+250,Saraikela-Kharsawan,Saraikela-Kharsawan,Jharkhand,Jharkhand,False
+251,Belgaum,Belgaum,Karnataka,Karnataka,False
+252,Bagalkot,Bagalkot,Karnataka,Karnataka,False
+253,Bijapur,Bijapur,Karnataka,Karnataka,False
+254,Bidar,Bidar,Karnataka,Karnataka,False
+255,Raichur,Raichur,Karnataka,Karnataka,False
+256,Koppal,Koppal,Karnataka,Karnataka,False
+257,Gadag,Gadag,Karnataka,Karnataka,False
+258,Dharwad,Dharwad,Karnataka,Karnataka,False
+259,Uttara Kannada,Uttara Kannada,Karnataka,Karnataka,False
+260,Haveri,Haveri,Karnataka,Karnataka,False
+261,Bellary,Bellary,Karnataka,Karnataka,False
+262,Chitradurga,Chitradurga,Karnataka,Karnataka,False
+263,Davanagere,Davanagere,Karnataka,Karnataka,False
+264,Shimoga,Shimoga,Karnataka,Karnataka,False
+265,Udupi,Udupi,Karnataka,Karnataka,False
+266,Chikmagalur,Chikmagalur,Karnataka,Karnataka,False
+267,Tumkur,Tumkur,Karnataka,Karnataka,False
+268,Bangalore,Bangalore,Karnataka,Karnataka,False
+269,Mandya,Mandya,Karnataka,Karnataka,False
+270,Hassan,Hassan,Karnataka,Karnataka,False
+271,Dakshina Kannada,Dakshina Kannada,Karnataka,Karnataka,False
+272,Kodagu,Kodagu,Karnataka,Karnataka,False
+273,Mysore,Mysore,Karnataka,Karnataka,False
+274,Chamarajanagar,Chamarajanagar,Karnataka,Karnataka,False
+275,Gulbarga,Gulbarga,Karnataka,Karnataka,False
+276,Yadgir,Yadgir,Karnataka,Karnataka,False
+277,Kolar,Kolar,Karnataka,Karnataka,False
+278,Chikkaballapura,Chikkaballapura,Karnataka,Karnataka,False
+279,Bangalore Rural,Bangalore Rural,Karnataka,Karnataka,False
+280,Ramanagara,Ramanagara,Karnataka,Karnataka,False
+281,Kasaragod,Kasaragod,Kerala,Kerala,False
+282,Kannur,Kannur,Kerala,Kerala,False
+283,Wayanad,Wayanad,Kerala,Kerala,False
+284,Kozhikode,Kozhikode,Kerala,Kerala,False
+285,Malappuram,Malappuram,Kerala,Kerala,False
+286,Palakkad,Palakkad,Kerala,Kerala,False
+287,Thrissur,Thrissur,Kerala,Kerala,False
+288,Ernakulam,Ernakulam,Kerala,Kerala,False
+289,Idukki,Idukki,Kerala,Kerala,False
+290,Kottayam,Kottayam,Kerala,Kerala,False
+291,Alappuzha,Alappuzha,Kerala,Kerala,False
+292,Pathanamthitta,Pathanamthitta,Kerala,Kerala,False
+293,Kollam,Kollam,Kerala,Kerala,False
+294,Thiruvananthapuram,Thiruvananthapuram,Kerala,Kerala,False
+295,Leh(Ladakh),Leh(Ladakh),Ladakh,Ladakh,False
+296,Kargil,Kargil,Ladakh,Ladakh,False
+297,Lakshadweep,Lakshadweep,Lakshadweep,Lakshadweep,False
+298,Sheopur,Sheopur,Madhya Pradesh,Madhya Pradesh,False
+299,Morena,Morena,Madhya Pradesh,Madhya Pradesh,False
+300,Bhind,Bhind,Madhya Pradesh,Madhya Pradesh,False
+301,Gwalior,Gwalior,Madhya Pradesh,Madhya Pradesh,False
+302,Datia,Datia,Madhya Pradesh,Madhya Pradesh,False
+303,Shivpuri,Shivpuri,Madhya Pradesh,Madhya Pradesh,False
+304,Tikamgarh,Tikamgarh,Madhya Pradesh,Madhya Pradesh,False
+305,Chhatarpur,Chhatarpur,Madhya Pradesh,Madhya Pradesh,False
+306,Panna,Panna,Madhya Pradesh,Madhya Pradesh,False
+307,Sagar,Sagar,Madhya Pradesh,Madhya Pradesh,False
+308,Damoh,Damoh,Madhya Pradesh,Madhya Pradesh,False
+309,Satna,Satna,Madhya Pradesh,Madhya Pradesh,False
+310,Rewa,Rewa,Madhya Pradesh,Madhya Pradesh,False
+311,Umaria,Umaria,Madhya Pradesh,Madhya Pradesh,False
+312,Neemuch,Neemuch,Madhya Pradesh,Madhya Pradesh,False
+313,Mandsaur,Mandsaur,Madhya Pradesh,Madhya Pradesh,False
+314,Ratlam,Ratlam,Madhya Pradesh,Madhya Pradesh,False
+315,Ujjain,Ujjain,Madhya Pradesh,Madhya Pradesh,False
+316,Dewas,Dewas,Madhya Pradesh,Madhya Pradesh,False
+317,Dhar,Dhar,Madhya Pradesh,Madhya Pradesh,False
+318,Indore,Indore,Madhya Pradesh,Madhya Pradesh,False
+319,Khargone (West Nimar),Khargone (West Nimar),Madhya Pradesh,Madhya Pradesh,False
+320,Barwani,Barwani,Madhya Pradesh,Madhya Pradesh,False
+321,Rajgarh,Rajgarh,Madhya Pradesh,Madhya Pradesh,False
+322,Vidisha,Vidisha,Madhya Pradesh,Madhya Pradesh,False
+323,Bhopal,Bhopal,Madhya Pradesh,Madhya Pradesh,False
+324,Sehore,Sehore,Madhya Pradesh,Madhya Pradesh,False
+325,Raisen,Raisen,Madhya Pradesh,Madhya Pradesh,False
+326,Betul,Betul,Madhya Pradesh,Madhya Pradesh,False
+327,Harda,Harda,Madhya Pradesh,Madhya Pradesh,False
+328,Hoshangabad,Hoshangabad,Madhya Pradesh,Madhya Pradesh,False
+329,Katni,Katni,Madhya Pradesh,Madhya Pradesh,False
+330,Jabalpur,Jabalpur,Madhya Pradesh,Madhya Pradesh,False
+331,Narsimhapur,Narsimhapur,Madhya Pradesh,Madhya Pradesh,False
+332,Dindori,Dindori,Madhya Pradesh,Madhya Pradesh,False
+333,Mandla,Mandla,Madhya Pradesh,Madhya Pradesh,False
+334,Chhindwara,Chhindwara,Madhya Pradesh,Madhya Pradesh,False
+335,Seoni,Seoni,Madhya Pradesh,Madhya Pradesh,False
+336,Balaghat,Balaghat,Madhya Pradesh,Madhya Pradesh,False
+337,Guna,Guna,Madhya Pradesh,Madhya Pradesh,False
+338,Ashoknagar,Ashoknagar,Madhya Pradesh,Madhya Pradesh,False
+339,Shahdol,Shahdol,Madhya Pradesh,Madhya Pradesh,False
+340,Anuppur,Anuppur,Madhya Pradesh,Madhya Pradesh,False
+341,Sidhi,Sidhi,Madhya Pradesh,Madhya Pradesh,False
+342,Singrauli,Singrauli,Madhya Pradesh,Madhya Pradesh,False
+343,Jhabua,Jhabua,Madhya Pradesh,Madhya Pradesh,False
+344,Alirajpur,Alirajpur,Madhya Pradesh,Madhya Pradesh,False
+345,Khandwa (East Nimar),Khandwa (East Nimar),Madhya Pradesh,Madhya Pradesh,False
+346,Burhanpur,Burhanpur,Madhya Pradesh,Madhya Pradesh,False
+347,Agar Malwa,Agar Malwa,Madhya Pradesh,Madhya Pradesh,False
+348,Shajapur,Shajapur,Madhya Pradesh,Madhya Pradesh,False
+349,Nandurbar,Nandurbar,Maharastra,Maharastra,False
+350,Dhule,Dhule,Maharastra,Maharastra,False
+351,Jalgaon,Jalgaon,Maharastra,Maharastra,False
+352,Buldana,Buldana,Maharastra,Maharastra,False
+353,Akola,Akola,Maharastra,Maharastra,False
+354,Washim,Washim,Maharastra,Maharastra,False
+355,Amravati,Amravati,Maharastra,Maharastra,False
+356,Wardha,Wardha,Maharastra,Maharastra,False
+357,Nagpur,Nagpur,Maharastra,Maharastra,False
+358,Bhandara,Bhandara,Maharastra,Maharastra,False
+359,Gondiya,Gondiya,Maharastra,Maharastra,False
+360,Gadchiroli,Gadchiroli,Maharastra,Maharastra,False
+361,Chandrapur,Chandrapur,Maharastra,Maharastra,False
+362,Yavatmal,Yavatmal,Maharastra,Maharastra,False
+363,Nanded,Nanded,Maharastra,Maharastra,False
+364,Hingoli,Hingoli,Maharastra,Maharastra,False
+365,Parbhani,Parbhani,Maharastra,Maharastra,False
+366,Jalna,Jalna,Maharastra,Maharastra,False
+367,Aurangabad,Aurangabad,Maharastra,Maharastra,False
+368,Nashik,Nashik,Maharastra,Maharastra,False
+369,Mumbai Suburban,Mumbai Suburban,Maharastra,Maharastra,False
+370,Mumbai,Mumbai,Maharastra,Maharastra,False
+371,Raigarh,Raigarh,Maharastra,Maharastra,False
+372,Pune,Pune,Maharastra,Maharastra,False
+373,Ahmadnagar,Ahmadnagar,Maharastra,Maharastra,False
+374,Bid,Bid,Maharastra,Maharastra,False
+375,Latur,Latur,Maharastra,Maharastra,False
+376,Osmanabad,Osmanabad,Maharastra,Maharastra,False
+377,Solapur,Solapur,Maharastra,Maharastra,False
+378,Satara,Satara,Maharastra,Maharastra,False
+379,Ratnagiri,Ratnagiri,Maharastra,Maharastra,False
+380,Sindhudurg,Sindhudurg,Maharastra,Maharastra,False
+381,Kolhapur,Kolhapur,Maharastra,Maharastra,False
+382,Sangli,Sangli,Maharastra,Maharastra,False
+383,Palghar,Palghar,Maharastra,Maharastra,False
+384,Thane,Thane,Maharastra,Maharastra,False
+385,Senapati,Senapati,Manipur,Manipur,False
+386,Tamenglong,Tamenglong,Manipur,Manipur,False
+387,Churachandpur,Churachandpur,Manipur,Manipur,False
+388,Bishnupur,Bishnupur,Manipur,Manipur,False
+389,Thoubal,Thoubal,Manipur,Manipur,False
+390,Imphal West,Imphal West,Manipur,Manipur,False
+391,Imphal East,Imphal East,Manipur,Manipur,False
+392,Ukhrul,Ukhrul,Manipur,Manipur,False
+393,Chandel,Chandel,Manipur,Manipur,False
+394,South Garo Hills,South Garo Hills,Meghalaya,Meghalaya,False
+395,Ribhoi,Ribhoi,Meghalaya,Meghalaya,False
+396,East Khasi Hills,East Khasi Hills,Meghalaya,Meghalaya,False
+397,East Garo Hills,East Garo Hills,Meghalaya,Meghalaya,False
+398,East Jantia Hills,East Jantia Hills,Meghalaya,Meghalaya,False
+399,North Garo Hills,North Garo Hills,Meghalaya,Meghalaya,False
+400,South West Garo Hills,South West Garo Hills,Meghalaya,Meghalaya,False
+401,South West Khasi Hills,South West Khasi Hills,Meghalaya,Meghalaya,False
+402,West Garo Hills,West Garo Hills,Meghalaya,Meghalaya,False
+403,West Jaintia Hills,West Jaintia Hills,Meghalaya,Meghalaya,False
+404,West Khasi Hills,West Khasi Hills,Meghalaya,Meghalaya,False
+405,Chandel,Chandel,Mizoram,Mizoram,False
+406,Mamit,Mamit,Mizoram,Mizoram,False
+407,Kolasib,Kolasib,Mizoram,Mizoram,False
+408,Aizawl,Aizawl,Mizoram,Mizoram,False
+409,Champhai,Champhai,Mizoram,Mizoram,False
+410,Serchhip,Serchhip,Mizoram,Mizoram,False
+411,Lunglei,Lunglei,Mizoram,Mizoram,False
+412,Lawngtlai,Lawngtlai,Mizoram,Mizoram,False
+413,Mon,Mon,Nagaland,Nagaland,False
+414,Mokokchung,Mokokchung,Nagaland,Nagaland,False
+415,Zunheboto,Zunheboto,Nagaland,Nagaland,False
+416,Wokha,Wokha,Nagaland,Nagaland,False
+417,Dimapur,Dimapur,Nagaland,Nagaland,False
+418,Phek,Phek,Nagaland,Nagaland,False
+419,Tuensang,Tuensang,Nagaland,Nagaland,False
+420,Longleng,Longleng,Nagaland,Nagaland,False
+421,Kiphire,Kiphire,Nagaland,Nagaland,False
+422,Kohima,Kohima,Nagaland,Nagaland,False
+423,Peren,Peren,Nagaland,Nagaland,False
+424,Central,Central,NCT of Delhi,NCT of Delhi,False
+425,East,East,NCT of Delhi,NCT of Delhi,False
+426,New Delhi,New Delhi,NCT of Delhi,NCT of Delhi,False
+427,North,North,NCT of Delhi,NCT of Delhi,False
+428,North East,North East,NCT of Delhi,NCT of Delhi,False
+429,North West,North West,NCT of Delhi,NCT of Delhi,False
+430,Shahdara,Shahdara,NCT of Delhi,NCT of Delhi,False
+431,South,South,NCT of Delhi,NCT of Delhi,False
+432,South East,South East,NCT of Delhi,NCT of Delhi,False
+433,South West,South West,NCT of Delhi,NCT of Delhi,False
+434,West,West,NCT of Delhi,NCT of Delhi,False
+435,Bargarh,Bargarh,Odisha,Odisha,False
+436,Jharsuguda,Jharsuguda,Odisha,Odisha,False
+437,Sambalpur,Sambalpur,Odisha,Odisha,False
+438,Debagarh,Debagarh,Odisha,Odisha,False
+439,Sundargarh,Sundargarh,Odisha,Odisha,False
+440,Kendujhar,Kendujhar,Odisha,Odisha,False
+441,Mayurbhanj,Mayurbhanj,Odisha,Odisha,False
+442,Baleshwar,Baleshwar,Odisha,Odisha,False
+443,Bhadrak,Bhadrak,Odisha,Odisha,False
+444,Kendrapara,Kendrapara,Odisha,Odisha,False
+445,Jagatsinghapur,Jagatsinghapur,Odisha,Odisha,False
+446,Cuttack,Cuttack,Odisha,Odisha,False
+447,Jajapur,Jajapur,Odisha,Odisha,False
+448,Dhenkanal,Dhenkanal,Odisha,Odisha,False
+449,Anugul,Anugul,Odisha,Odisha,False
+450,Nayagarh,Nayagarh,Odisha,Odisha,False
+451,Khordha,Khordha,Odisha,Odisha,False
+452,Puri,Puri,Odisha,Odisha,False
+453,Ganjam,Ganjam,Odisha,Odisha,False
+454,Gajapati,Gajapati,Odisha,Odisha,False
+455,Kandhamal,Kandhamal,Odisha,Odisha,False
+456,Baudh,Baudh,Odisha,Odisha,False
+457,Subarnapur,Subarnapur,Odisha,Odisha,False
+458,Balangir,Balangir,Odisha,Odisha,False
+459,Nuapada,Nuapada,Odisha,Odisha,False
+460,Kalahandi,Kalahandi,Odisha,Odisha,False
+461,Rayagada,Rayagada,Odisha,Odisha,False
+462,Nabarangapur,Nabarangapur,Odisha,Odisha,False
+463,Koraput,Koraput,Odisha,Odisha,False
+464,Malkangiri,Malkangiri,Odisha,Odisha,False
+465,Yanam,Yanam,Puducherry,Puducherry,False
+466,Puducherry,Puducherry,Puducherry,Puducherry,False
+467,Mahe,Mahe,Puducherry,Puducherry,False
+468,Karaikal,Karaikal,Puducherry,Puducherry,False
+469,Kapurthala,Kapurthala,Punjab,Punjab,False
+470,Jalandhar,Jalandhar,Punjab,Punjab,False
+471,Hoshiarpur,Hoshiarpur,Punjab,Punjab,False
+472,Shahid Bhagat Singh Nagar,Shahid Bhagat Singh Nagar,Punjab,Punjab,False
+473,Fatehgarh Sahib,Fatehgarh Sahib,Punjab,Punjab,False
+474,Ludhiana,Ludhiana,Punjab,Punjab,False
+475,Moga,Moga,Punjab,Punjab,False
+476,Muktsar,Muktsar,Punjab,Punjab,False
+477,Faridkot,Faridkot,Punjab,Punjab,False
+478,Bathinda,Bathinda,Punjab,Punjab,False
+479,Mansa,Mansa,Punjab,Punjab,False
+480,Patiala,Patiala,Punjab,Punjab,False
+481,Amritsar,Amritsar,Punjab,Punjab,False
+482,Tarn Taran,Tarn Taran,Punjab,Punjab,False
+483,Rupnagar,Rupnagar,Punjab,Punjab,False
+484,Sahibzada Ajit Singh Nagar,Sahibzada Ajit Singh Nagar,Punjab,Punjab,False
+485,Sangrur,Sangrur,Punjab,Punjab,False
+486,Barnala,Barnala,Punjab,Punjab,False
+487,Fazilka,Fazilka,Punjab,Punjab,False
+488,Firozpur,Firozpur,Punjab,Punjab,False
+489,Gurdaspur,Gurdaspur,Punjab,Punjab,False
+490,Pathankot,Pathankot,Punjab,Punjab,False
+491,Ganganagar,Ganganagar,Rajasthan,Rajasthan,False
+492,Hanumangarh,Hanumangarh,Rajasthan,Rajasthan,False
+493,Bikaner,Bikaner,Rajasthan,Rajasthan,False
+494,Churu,Churu,Rajasthan,Rajasthan,False
+495,Jhunjhunun,Jhunjhunun,Rajasthan,Rajasthan,False
+496,Alwar,Alwar,Rajasthan,Rajasthan,False
+497,Bharatpur,Bharatpur,Rajasthan,Rajasthan,False
+498,Dhaulpur,Dhaulpur,Rajasthan,Rajasthan,False
+499,Karauli,Karauli,Rajasthan,Rajasthan,False
+500,Sawai Madhopur,Sawai Madhopur,Rajasthan,Rajasthan,False
+501,Dausa,Dausa,Rajasthan,Rajasthan,False
+502,Jaipur,Jaipur,Rajasthan,Rajasthan,False
+503,Sikar,Sikar,Rajasthan,Rajasthan,False
+504,Nagaur,Nagaur,Rajasthan,Rajasthan,False
+505,Jodhpur,Jodhpur,Rajasthan,Rajasthan,False
+506,Jaisalmer,Jaisalmer,Rajasthan,Rajasthan,False
+507,Barmer,Barmer,Rajasthan,Rajasthan,False
+508,Jalor,Jalor,Rajasthan,Rajasthan,False
+509,Sirohi,Sirohi,Rajasthan,Rajasthan,False
+510,Pali,Pali,Rajasthan,Rajasthan,False
+511,Ajmer,Ajmer,Rajasthan,Rajasthan,False
+512,Tonk,Tonk,Rajasthan,Rajasthan,False
+513,Bundi,Bundi,Rajasthan,Rajasthan,False
+514,Bhilwara,Bhilwara,Rajasthan,Rajasthan,False
+515,Rajsamand,Rajsamand,Rajasthan,Rajasthan,False
+516,Dungarpur,Dungarpur,Rajasthan,Rajasthan,False
+517,Banswara,Banswara,Rajasthan,Rajasthan,False
+518,Chittaurgarh,Chittaurgarh,Rajasthan,Rajasthan,False
+519,Kota,Kota,Rajasthan,Rajasthan,False
+520,Baran,Baran,Rajasthan,Rajasthan,False
+521,Jhalawar,Jhalawar,Rajasthan,Rajasthan,False
+522,Udaipur,Udaipur,Rajasthan,Rajasthan,False
+523,Pratapgarh,Pratapgarh,Rajasthan,Rajasthan,False
+524,North  District,North  District,Sikkim,Sikkim,False
+525,West District,West District,Sikkim,Sikkim,False
+526,South District,South District,Sikkim,Sikkim,False
+527,East District,East District,Sikkim,Sikkim,False
+528,Thiruvallur,Thiruvallur,Tamil Nadu,Tamil Nadu,False
+529,Chennai,Chennai,Tamil Nadu,Tamil Nadu,False
+530,Kancheepuram,Kancheepuram,Tamil Nadu,Tamil Nadu,False
+531,Vellore,Vellore,Tamil Nadu,Tamil Nadu,False
+532,Tiruvannamalai,Tiruvannamalai,Tamil Nadu,Tamil Nadu,False
+533,Viluppuram,Viluppuram,Tamil Nadu,Tamil Nadu,False
+534,Salem,Salem,Tamil Nadu,Tamil Nadu,False
+535,Namakkal,Namakkal,Tamil Nadu,Tamil Nadu,False
+536,Erode,Erode,Tamil Nadu,Tamil Nadu,False
+537,The Nilgiris,The Nilgiris,Tamil Nadu,Tamil Nadu,False
+538,Dindigul,Dindigul,Tamil Nadu,Tamil Nadu,False
+539,Karur,Karur,Tamil Nadu,Tamil Nadu,False
+540,Tiruchirappalli,Tiruchirappalli,Tamil Nadu,Tamil Nadu,False
+541,Perambalur,Perambalur,Tamil Nadu,Tamil Nadu,False
+542,Ariyalur,Ariyalur,Tamil Nadu,Tamil Nadu,False
+543,Cuddalore,Cuddalore,Tamil Nadu,Tamil Nadu,False
+544,Nagapattinam,Nagapattinam,Tamil Nadu,Tamil Nadu,False
+545,Thiruvarur,Thiruvarur,Tamil Nadu,Tamil Nadu,False
+546,Thanjavur,Thanjavur,Tamil Nadu,Tamil Nadu,False
+547,Pudukkottai,Pudukkottai,Tamil Nadu,Tamil Nadu,False
+548,Sivaganga,Sivaganga,Tamil Nadu,Tamil Nadu,False
+549,Madurai,Madurai,Tamil Nadu,Tamil Nadu,False
+550,Theni,Theni,Tamil Nadu,Tamil Nadu,False
+551,Virudhunagar,Virudhunagar,Tamil Nadu,Tamil Nadu,False
+552,Ramanathapuram,Ramanathapuram,Tamil Nadu,Tamil Nadu,False
+553,Thoothukkudi,Thoothukkudi,Tamil Nadu,Tamil Nadu,False
+554,Tirunelveli,Tirunelveli,Tamil Nadu,Tamil Nadu,False
+555,Kanniyakumari,Kanniyakumari,Tamil Nadu,Tamil Nadu,False
+556,Dharmapuri,Dharmapuri,Tamil Nadu,Tamil Nadu,False
+557,Krishnagiri,Krishnagiri,Tamil Nadu,Tamil Nadu,False
+558,Coimbatore,Coimbatore,Tamil Nadu,Tamil Nadu,False
+559,Tiruppur,Tiruppur,Tamil Nadu,Tamil Nadu,False
+560,Adilabad,Adilabad,Telangana,Telangana,False
+561,Bhadradri Kothagudem,Bhadradri Kothagudem,Telangana,Telangana,False
+562,Hyderabad,Hyderabad,Telangana,Telangana,False
+563,Jagitial,Jagitial,Telangana,Telangana,False
+564,Jangoan,Jangoan,Telangana,Telangana,False
+565,Jayashankar Bhupalapally,Jayashankar Bhupalapally,Telangana,Telangana,False
+566,Jogulamba Gadwal,Jogulamba Gadwal,Telangana,Telangana,False
+567,Kamareddy,Kamareddy,Telangana,Telangana,False
+568,Karimnagar,Karimnagar,Telangana,Telangana,False
+569,Khammam,Khammam,Telangana,Telangana,False
+570,Komaram Bheem Asifabad,Komaram Bheem Asifabad,Telangana,Telangana,False
+571,Mahabubabad,Mahabubabad,Telangana,Telangana,False
+572,Mahabubnagar,Mahabubnagar,Telangana,Telangana,False
+573,Mancherial,Mancherial,Telangana,Telangana,False
+574,Medak,Medak,Telangana,Telangana,False
+575,Medchal-Malkajgiri,Medchal-Malkajgiri,Telangana,Telangana,False
+576,Nagarkurnool,Nagarkurnool,Telangana,Telangana,False
+577,Nalgonda,Nalgonda,Telangana,Telangana,False
+578,Nirmal,Nirmal,Telangana,Telangana,False
+579,Nizamabad,Nizamabad,Telangana,Telangana,False
+580,Peddapalli,Peddapalli,Telangana,Telangana,False
+581,Rajanna Sircilla,Rajanna Sircilla,Telangana,Telangana,False
+582,Ranga Reddy,Ranga Reddy,Telangana,Telangana,False
+583,Sangareddy,Sangareddy,Telangana,Telangana,False
+584,Siddipet,Siddipet,Telangana,Telangana,False
+585,Suryapet,Suryapet,Telangana,Telangana,False
+586,Vikarabad,Vikarabad,Telangana,Telangana,False
+587,Wanaparthy,Wanaparthy,Telangana,Telangana,False
+588,Warangal Rural,Warangal Rural,Telangana,Telangana,False
+589,Warangal Urban,Warangal Urban,Telangana,Telangana,False
+590,Yadadri Bhuvanagiri,Yadadri Bhuvanagiri,Telangana,Telangana,False
+591,Dhalai,Dhalai,Tripura,Tripura,False
+592,Gomati,Gomati,Tripura,Tripura,False
+593,Khowai,Khowai,Tripura,Tripura,False
+594,North Tripura,North Tripura,Tripura,Tripura,False
+595,Sepahijala,Sepahijala,Tripura,Tripura,False
+596,South Tripura,South Tripura,Tripura,Tripura,False
+597,Unakoti,Unakoti,Tripura,Tripura,False
+598,West Tripura,West Tripura,Tripura,Tripura,False
+599,Saharanpur,Saharanpur,Uttar Pradesh,Uttar Pradesh,False
+600,Bijnor,Bijnor,Uttar Pradesh,Uttar Pradesh,False
+601,Rampur,Rampur,Uttar Pradesh,Uttar Pradesh,False
+602,Jyotiba Phule Nagar,Jyotiba Phule Nagar,Uttar Pradesh,Uttar Pradesh,False
+603,Meerut,Meerut,Uttar Pradesh,Uttar Pradesh,False
+604,Baghpat,Baghpat,Uttar Pradesh,Uttar Pradesh,False
+605,Gautam Buddha Nagar,Gautam Buddha Nagar,Uttar Pradesh,Uttar Pradesh,False
+606,Bulandshahr,Bulandshahr,Uttar Pradesh,Uttar Pradesh,False
+607,Aligarh,Aligarh,Uttar Pradesh,Uttar Pradesh,False
+608,Mahamaya Nagar,Mahamaya Nagar,Uttar Pradesh,Uttar Pradesh,False
+609,Mathura,Mathura,Uttar Pradesh,Uttar Pradesh,False
+610,Agra,Agra,Uttar Pradesh,Uttar Pradesh,False
+611,Firozabad,Firozabad,Uttar Pradesh,Uttar Pradesh,False
+612,Mainpuri,Mainpuri,Uttar Pradesh,Uttar Pradesh,False
+613,Bareilly,Bareilly,Uttar Pradesh,Uttar Pradesh,False
+614,Pilibhit,Pilibhit,Uttar Pradesh,Uttar Pradesh,False
+615,Shahjahanpur,Shahjahanpur,Uttar Pradesh,Uttar Pradesh,False
+616,Kheri,Kheri,Uttar Pradesh,Uttar Pradesh,False
+617,Sitapur,Sitapur,Uttar Pradesh,Uttar Pradesh,False
+618,Hardoi,Hardoi,Uttar Pradesh,Uttar Pradesh,False
+619,Unnao,Unnao,Uttar Pradesh,Uttar Pradesh,False
+620,Lucknow,Lucknow,Uttar Pradesh,Uttar Pradesh,False
+621,Farrukhabad,Farrukhabad,Uttar Pradesh,Uttar Pradesh,False
+622,Kannauj,Kannauj,Uttar Pradesh,Uttar Pradesh,False
+623,Etawah,Etawah,Uttar Pradesh,Uttar Pradesh,False
+624,Auraiya,Auraiya,Uttar Pradesh,Uttar Pradesh,False
+625,Kanpur Dehat,Kanpur Dehat,Uttar Pradesh,Uttar Pradesh,False
+626,Kanpur Nagar,Kanpur Nagar,Uttar Pradesh,Uttar Pradesh,False
+627,Jalaun,Jalaun,Uttar Pradesh,Uttar Pradesh,False
+628,Jhansi,Jhansi,Uttar Pradesh,Uttar Pradesh,False
+629,Lalitpur,Lalitpur,Uttar Pradesh,Uttar Pradesh,False
+630,Hamirpur,Hamirpur,Uttar Pradesh,Uttar Pradesh,False
+631,Mahoba,Mahoba,Uttar Pradesh,Uttar Pradesh,False
+632,Banda,Banda,Uttar Pradesh,Uttar Pradesh,False
+633,Chitrakoot,Chitrakoot,Uttar Pradesh,Uttar Pradesh,False
+634,Fatehpur,Fatehpur,Uttar Pradesh,Uttar Pradesh,False
+635,Pratapgarh,Pratapgarh,Uttar Pradesh,Uttar Pradesh,False
+636,Kaushambi,Kaushambi,Uttar Pradesh,Uttar Pradesh,False
+637,Allahabad,Allahabad,Uttar Pradesh,Uttar Pradesh,False
+638,Bara Banki,Bara Banki,Uttar Pradesh,Uttar Pradesh,False
+639,Faizabad,Faizabad,Uttar Pradesh,Uttar Pradesh,False
+640,Ambedkar Nagar,Ambedkar Nagar,Uttar Pradesh,Uttar Pradesh,False
+641,Bahraich,Bahraich,Uttar Pradesh,Uttar Pradesh,False
+642,Shrawasti,Shrawasti,Uttar Pradesh,Uttar Pradesh,False
+643,Balrampur,Balrampur,Uttar Pradesh,Uttar Pradesh,False
+644,Gonda,Gonda,Uttar Pradesh,Uttar Pradesh,False
+645,Siddharthnagar,Siddharthnagar,Uttar Pradesh,Uttar Pradesh,False
+646,Basti,Basti,Uttar Pradesh,Uttar Pradesh,False
+647,Sant Kabir Nagar,Sant Kabir Nagar,Uttar Pradesh,Uttar Pradesh,False
+648,Mahrajganj,Mahrajganj,Uttar Pradesh,Uttar Pradesh,False
+649,Gorakhpur,Gorakhpur,Uttar Pradesh,Uttar Pradesh,False
+650,Kushinagar,Kushinagar,Uttar Pradesh,Uttar Pradesh,False
+651,Deoria,Deoria,Uttar Pradesh,Uttar Pradesh,False
+652,Azamgarh,Azamgarh,Uttar Pradesh,Uttar Pradesh,False
+653,Mau,Mau,Uttar Pradesh,Uttar Pradesh,False
+654,Ballia,Ballia,Uttar Pradesh,Uttar Pradesh,False
+655,Jaunpur,Jaunpur,Uttar Pradesh,Uttar Pradesh,False
+656,Ghazipur,Ghazipur,Uttar Pradesh,Uttar Pradesh,False
+657,Chandauli,Chandauli,Uttar Pradesh,Uttar Pradesh,False
+658,Varanasi,Varanasi,Uttar Pradesh,Uttar Pradesh,False
+659,Sant Ravidas Nagar (Bhadohi),Sant Ravidas Nagar (Bhadohi),Uttar Pradesh,Uttar Pradesh,False
+660,Mirzapur,Mirzapur,Uttar Pradesh,Uttar Pradesh,False
+661,Sonbhadra,Sonbhadra,Uttar Pradesh,Uttar Pradesh,False
+662,Etah,Etah,Uttar Pradesh,Uttar Pradesh,False
+663,Kanshiram Nagar,Kanshiram Nagar,Uttar Pradesh,Uttar Pradesh,False
+664,Amethi,Amethi,Uttar Pradesh,Uttar Pradesh,False
+665,Budaun,Budaun,Uttar Pradesh,Uttar Pradesh,False
+666,Ghaziabad,Ghaziabad,Uttar Pradesh,Uttar Pradesh,False
+667,Hapur,Hapur,Uttar Pradesh,Uttar Pradesh,False
+668,Moradabad,Moradabad,Uttar Pradesh,Uttar Pradesh,False
+669,Muzaffarnagar,Muzaffarnagar,Uttar Pradesh,Uttar Pradesh,False
+670,Rae Bareli,Rae Bareli,Uttar Pradesh,Uttar Pradesh,False
+671,Sambhal,Sambhal,Uttar Pradesh,Uttar Pradesh,False
+672,Shamli,Shamli,Uttar Pradesh,Uttar Pradesh,False
+673,Sultanpur,Sultanpur,Uttar Pradesh,Uttar Pradesh,False
+674,Uttarkashi,Uttarkashi,Uttarakhand,Uttarakhand,False
+675,Chamoli,Chamoli,Uttarakhand,Uttarakhand,False
+676,Rudraprayag,Rudraprayag,Uttarakhand,Uttarakhand,False
+677,Tehri Garhwal,Tehri Garhwal,Uttarakhand,Uttarakhand,False
+678,Dehradun,Dehradun,Uttarakhand,Uttarakhand,False
+679,Garhwal,Garhwal,Uttarakhand,Uttarakhand,False
+680,Pithoragarh,Pithoragarh,Uttarakhand,Uttarakhand,False
+681,Bageshwar,Bageshwar,Uttarakhand,Uttarakhand,False
+682,Almora,Almora,Uttarakhand,Uttarakhand,False
+683,Champawat,Champawat,Uttarakhand,Uttarakhand,False
+684,Nainital,Nainital,Uttarakhand,Uttarakhand,False
+685,Udham Singh Nagar,Udham Singh Nagar,Uttarakhand,Uttarakhand,False
+686,Hardwar,Hardwar,Uttarakhand,Uttarakhand,False
+687,Darjiling,Darjiling,West Bengal,West Bengal,False
+688,Jalpaiguri,Jalpaiguri,West Bengal,West Bengal,False
+689,Koch Bihar,Koch Bihar,West Bengal,West Bengal,False
+690,Uttar Dinajpur,Uttar Dinajpur,West Bengal,West Bengal,False
+691,Dakshin Dinajpur,Dakshin Dinajpur,West Bengal,West Bengal,False
+692,Maldah,Maldah,West Bengal,West Bengal,False
+693,Murshidabad,Murshidabad,West Bengal,West Bengal,False
+694,Birbhum,Birbhum,West Bengal,West Bengal,False
+695,Nadia,Nadia,West Bengal,West Bengal,False
+696,North Twenty Four Pargana,North Twenty Four Pargana,West Bengal,West Bengal,False
+697,Hugli,Hugli,West Bengal,West Bengal,False
+698,Bankura,Bankura,West Bengal,West Bengal,False
+699,Puruliya,Puruliya,West Bengal,West Bengal,False
+700,Haora,Haora,West Bengal,West Bengal,False
+701,Kolkata,Kolkata,West Bengal,West Bengal,False
+702,South Twenty Four Pargana,South Twenty Four Pargana,West Bengal,West Bengal,False
+703,Paschim Medinipur,Paschim Medinipur,West Bengal,West Bengal,False
+704,Purba Medinipur,Purba Medinipur,West Bengal,West Bengal,False
+705,Paschim Barddhaman,Paschim Barddhaman,West Bengal,West Bengal,False
