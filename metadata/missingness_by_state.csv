@@ -1,0 +1,37 @@
+state,n_districts,mean_completeness,min_completeness,max_completeness,mean_missing
+Goa,2,86.92,81.31,92.52,14.0
+Sikkim,4,88.08,82.24,91.59,12.75
+Andaman & Nicobar Islands,3,88.16,80.37,92.52,12.67
+Kerala,14,90.52,82.24,94.39,10.14
+Chandigarh,1,90.65,90.65,90.65,10.0
+Tamil Nadu,32,91.85,81.31,94.39,8.72
+Puducherry,4,92.29,91.59,92.52,8.25
+Himachal Pradesh,12,92.44,90.65,95.33,8.08
+Andhra Pradesh,13,93.03,88.79,95.33,7.46
+Dadra and Nagar Haveli & Daman and Diu,3,93.14,92.52,94.39,7.33
+Arunachal Pradesh,20,93.22,89.72,96.26,7.25
+Madhya Pradesh,51,93.35,75.7,98.13,7.12
+Punjab,22,93.42,90.65,97.2,7.05
+Mizoram,8,93.46,91.59,95.33,7.0
+Lakshadweep,1,93.46,93.46,93.46,7.0
+Tripura,8,93.69,91.59,95.33,6.75
+Haryana,22,93.76,81.31,99.07,6.68
+Jammu & Kashmir,20,93.93,91.59,97.2,6.5
+Telangana,31,94.0,91.59,97.2,6.42
+Uttarakhand,13,94.1,92.52,96.26,6.31
+Karnataka,30,94.14,91.59,98.13,6.27
+Nagaland,11,94.14,92.52,96.26,6.27
+Chhattisgarh,27,94.15,92.52,98.13,6.26
+Maharastra,36,94.21,81.31,99.07,6.19
+Odisha,30,94.36,91.59,99.07,6.03
+West Bengal,19,94.64,91.59,98.13,5.74
+Assam,33,94.65,91.59,99.07,5.73
+Ladakh,2,94.86,93.46,96.26,5.5
+Gujarat,33,95.13,91.59,98.13,5.21
+Manipur,9,95.33,92.52,98.13,5.0
+NCT of Delhi,11,95.33,92.52,98.13,5.0
+Rajasthan,33,95.7,92.52,99.07,4.61
+Uttar Pradesh,75,96.81,92.52,100.0,3.41
+Jharkhand,24,96.88,92.52,99.07,3.33
+Meghalaya,11,97.28,92.52,100.0,2.91
+Bihar,38,98.55,95.33,100.0,1.55

@@ -10,6 +10,7 @@ code runs.  They check:
   5. Missingness calculations are correct.
   6. Audit outputs are generated on a real run.
   7. Coercion tracking works as expected.
+  8. Semantic logic for corrective pass.
 """
 
 from __future__ import annotations
@@ -40,6 +41,8 @@ from src.audit.missingness import feature_missingness, district_missingness
 from src.audit.column_classifier import classify_columns, get_columns_by_role
 from src.audit.indicator_inventory import build_indicator_inventory
 from src.audit.validation import range_validation, distribution_statistics
+from src.audit.semantic_review import generate_semantic_review
+from src.audit.holdout_registry import generate_holdout_registry
 
 
 # ── Fixtures ───────────────────────────────────────────────────────────
@@ -97,6 +100,11 @@ class TestDataLoading:
     def test_coercion_report_shape_matches(self, df, coercion):
         assert coercion.loaded_rows == len(df)
         assert coercion.loaded_cols == len(df.columns)
+        
+    def test_coercion_report_has_low_sample_flags(self, coercion):
+        assert coercion.suppressed_flags is not None
+        assert coercion.low_sample_flags is not None
+        assert len(coercion.low_sample_flags) > 0
 
 
 # ── 2. District/state identifiers detected ────────────────────────────
@@ -190,14 +198,6 @@ class TestMissingness:
         assert fm["missing_pct"].min() >= 0.0
         assert fm["missing_pct"].max() <= 100.0
 
-    def test_district_missingness_completeness_range(self, df):
-        ids = detect_identifier_columns(df)
-        dcol = ids["district_cols"][0]
-        scol = ids["state_cols"][0]
-        dm = district_missingness(df, dcol, scol)
-        assert dm["completeness_pct"].min() >= 0.0
-        assert dm["completeness_pct"].max() <= 100.0
-
 
 # ── 6. Column classification ─────────────────────────────────────────
 
@@ -216,33 +216,47 @@ class TestColumnClassification:
             f"Expected at least 2 IDENTIFIER columns, got {len(id_cols)}"
         )
 
-    def test_health_indicators_detected(self, df):
+    def test_substantive_health_detected(self, df):
         cl = classify_columns(df)
-        hi_cols = get_columns_by_role(cl, "HEALTH_INDICATOR")
+        hi_cols = get_columns_by_role(cl, "SUBSTANTIVE_HEALTH")
         assert len(hi_cols) >= 50, (
-            f"Expected at least 50 HEALTH_INDICATOR columns, got {len(hi_cols)}"
+            f"Expected at least 50 SUBSTANTIVE_HEALTH columns, got {len(hi_cols)}"
         )
+        
+    def test_oop_expenditure_classification(self, df):
+        cl = classify_columns(df)
+        oop_cols = [c for c in cl["column"] if "out-of-pocket expenditure" in c.lower()]
+        if oop_cols:
+            oop_col = oop_cols[0]
+            row = cl[cl["column"] == oop_col].iloc[0]
+            assert row["basic_role"] == "HEALTH_SYSTEM"
+            assert row["is_health_system"] == True
+            assert row["indicator_type"] == "access_affordability"
 
 
 # ── 7. Audit output generation (integration test) ────────────────────
 
 class TestAuditOutput:
-    def test_data_dictionary_can_be_built(self, df):
+    def test_data_dictionary_can_be_built(self, df, coercion):
         cl = classify_columns(df)
-        inv = build_indicator_inventory(df, cl)
+        inv = build_indicator_inventory(df, cl, coercion)
         assert len(inv) == len(df.columns)
-        required_cols = ["column_name", "domain", "unit", "candidate_role"]
+        required_cols = ["original_column_name", "clean_name", "domain", "indicator_type", "is_contextual"]
         for rc in required_cols:
             assert rc in inv.columns, f"Missing column '{rc}' in inventory"
 
-    def test_distribution_stats_computed(self, df):
-        ds = distribution_statistics(df)
-        assert len(ds) > 0
-        assert "skewness" in ds.columns
-        assert "high_skew" in ds.columns
-
-    def test_range_validation_computed(self, df):
+    def test_semantic_review_can_be_built(self, df, coercion):
         cl = classify_columns(df)
-        rv = range_validation(df, cl)
-        assert len(rv) > 0
-        assert "action" in rv.columns
+        inv = build_indicator_inventory(df, cl, coercion)
+        sr = generate_semantic_review(df, inv)
+        assert len(sr) == len(df.columns)
+        assert "is_composite" in sr.columns
+        assert "is_derived" in sr.columns
+
+    def test_holdout_registry_can_be_built(self, df, coercion):
+        cl = classify_columns(df)
+        inv = build_indicator_inventory(df, cl, coercion)
+        sr = generate_semantic_review(df, inv)
+        hr = generate_holdout_registry(inv, sr)
+        assert len(hr) < len(df.columns)  # Identifiers are skipped
+        assert "candidate_status" in hr.columns

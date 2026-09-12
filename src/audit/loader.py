@@ -48,6 +48,10 @@ class CoercionReport:
     total_parenthesized: int = 0
     total_whitespace_stripped: int = 0
     total_coercion_failures: int = 0
+    
+    # flag matrices
+    suppressed_flags: pd.DataFrame = field(default=None)
+    low_sample_flags: pd.DataFrame = field(default=None)
 
     def summary(self) -> str:
         lines = [
@@ -156,6 +160,9 @@ def load_raw_dataset(
     # --- Step 4: controlled numeric conversion for indicator columns --------
     paren_re = re.compile(NFHS_PAREN_PATTERN)
     df = df_raw.copy()
+    
+    # Correction 4: build and preserve low-sample flag matrices
+    report.suppressed_flags, report.low_sample_flags = _build_flag_matrices(df_raw, indicator_cols)
 
     for col in indicator_cols:
         series = df[col].copy()

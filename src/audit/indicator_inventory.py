@@ -3,18 +3,13 @@ Indicator inventory builder.
 
 Parses column names to infer health domains and generates a structured
 inventory exported to ``metadata/data_dictionary.csv``.
-
-IMPORTANT: domains are *inferred* from column-name keywords.  If the
-meaning of a column cannot be determined from its header, it is marked
-``unknown / requires documentation``.
 """
 
 from __future__ import annotations
 
 import re
-from typing import Dict, List, Optional
+from typing import Dict, List
 
-import numpy as np
 import pandas as pd
 
 
@@ -83,7 +78,6 @@ _DOMAIN_RULES: List[tuple[str, List[str]]] = [
 
 
 def _infer_domain(col_name: str) -> str:
-    """Best-effort domain inference from column header text."""
     col_lower = col_name.lower()
     for domain, keywords in _DOMAIN_RULES:
         for kw in keywords:
@@ -93,55 +87,81 @@ def _infer_domain(col_name: str) -> str:
 
 
 def _infer_unit(col_name: str) -> str:
-    """Infer measurement unit from column header."""
     col_lower = col_name.lower()
     if "(%" in col_lower or col_lower.endswith("(%)"):
         return "percentage"
     if "per 1,000" in col_lower or "per 1000" in col_lower:
         return "ratio_per_1000"
     if "(rs.)" in col_lower:
-        return "rupees"
+        return "INR / Rupees"
     return "unknown"
+
+
+def _clean_column_name(col_name: str) -> str:
+    """Strip NFHS footnote superscripts and units like (%)."""
+    c = col_name.strip()
+    # Remove things like "12 (%)", "1, 16 (%)" at the end
+    c = re.sub(r'\d*[\s,]*\(\%\)$', '', c).strip()
+    c = re.sub(r'\(\%\)$', '', c).strip()
+    c = re.sub(r'\(Rs\.\)$', '', c).strip()
+    # Remove trailing numbers if they look like footnote markers
+    c = re.sub(r'\d+$', '', c).strip()
+    return c
 
 
 def build_indicator_inventory(
     df: pd.DataFrame,
     classification: pd.DataFrame,
+    coercion_report=None,
 ) -> pd.DataFrame:
     """
-    Build a full indicator inventory with domain, unit, stats, and role.
-
-    Parameters
-    ----------
-    df : pd.DataFrame
-        The loaded (coerced) dataset.
-    classification : pd.DataFrame
-        Output of ``column_classifier.classify_columns``.
-
-    Returns
-    -------
-    pd.DataFrame with one row per column.
+    Build a full indicator inventory with semantic metadata.
     """
-    class_map = dict(zip(classification["column"], classification["role"]))
+    class_map = classification.set_index("column").to_dict("index")
     records = []
 
     for col in df.columns:
         s = df[col]
         domain = _infer_domain(col)
         unit = _infer_unit(col)
-        role = class_map.get(col, "UNKNOWN")
+        clean_name = _clean_column_name(col)
+        
+        c_info = class_map.get(col, {})
+        basic_role = c_info.get("basic_role", "UNKNOWN")
+        indicator_type = c_info.get("indicator_type", "unknown")
+        
+        # low sample flag count
+        low_sample_count = 0
+        if coercion_report and col in coercion_report.parenthesized_counts:
+            low_sample_count = coercion_report.parenthesized_counts[col]
 
-        rec: Dict[str, object] = {
-            "column_name": col,
-            "data_type": str(s.dtype),
+        missing_pct = round(s.isna().sum() / len(s) * 100, 2)
+        
+        is_identifier = basic_role == "IDENTIFIER"
+        is_metadata = basic_role == "SAMPLE_METADATA"
+
+        rec = {
+            "original_column_name": col,
+            "clean_name": clean_name,
             "domain": domain,
-            "unit": unit,
-            "candidate_role": role,
-            "unique_count": int(s.nunique(dropna=True)),
-            "missing_count": int(s.isna().sum()),
-            "missing_pct": round(s.isna().sum() / len(s) * 100, 2),
+            "subdomain": "unknown", # to be refined later or manually
+            "indicator_type": indicator_type,
+            "measurement_unit": unit,
+            "directionality": "review_required",
+            "is_contextual": c_info.get("is_contextual", False),
+            "is_substantive_health": c_info.get("is_substantive_health", False),
+            "is_health_system": c_info.get("is_health_system", False),
+            "is_demographic": c_info.get("is_demographic", False),
+            "is_socioeconomic": c_info.get("is_socioeconomic", False),
+            "policy_relevance": "review_required" if not is_identifier and not is_metadata else "N/A",
+            "missingness_rate": missing_pct,
+            "low_sample_value_count": low_sample_count,
+            "clustering_candidate": "review_required" if not is_identifier and not is_metadata else False,
+            "holdout_candidate": "review_required" if not is_identifier and not is_metadata else False,
+            "exclusion_reason": "N/A",
+            "review_status": "pending",
         }
-
+        
         if pd.api.types.is_numeric_dtype(s):
             nn = s.dropna()
             rec.update({
@@ -152,14 +172,6 @@ def build_indicator_inventory(
             })
         else:
             rec.update({"min": None, "max": None, "mean": None, "median": None})
-
-        # Notes for the reviewer
-        notes_parts = []
-        if domain == "unknown":
-            notes_parts.append("domain could not be inferred from header")
-        if unit == "unknown":
-            notes_parts.append("unit could not be inferred from header")
-        rec["notes"] = "; ".join(notes_parts) if notes_parts else ""
 
         records.append(rec)
 

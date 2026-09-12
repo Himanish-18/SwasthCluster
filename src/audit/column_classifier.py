@@ -1,28 +1,20 @@
 """
-Column classifier — assigns each column a preliminary role.
+Semantic column classifier — assigns each column a nuanced role and type.
 
-Roles
------
-- IDENTIFIER            : district/state name, codes
-- GEOGRAPHIC_METADATA   : geographic labels not used as features
-- HEALTH_INDICATOR      : candidate numeric health/nutrition variable
-- SAMPLE_METADATA       : survey sample counts (households, men, women surveyed)
-- STATISTICAL_METADATA  : expenditure (Rs.), sex ratios (per 1000), etc.
-- POTENTIAL_DERIVED     : composite scores, wealth indices, rankings
-- UNKNOWN               : cannot be classified confidently
-
-This module does NOT make final feature-selection decisions.
+This module maps raw columns to specific semantic categories rather than
+just a generic "HEALTH_INDICATOR". It distinguishes between true health
+outcomes, demographic context, healthcare access, and metadata.
 """
 
 from __future__ import annotations
 
 import re
-from typing import Dict, List
+from typing import Dict, List, Any
 
 import pandas as pd
 
 
-# ── Keyword-based classification rules ─────────────────────────────────
+# ── Keyword-based semantic rules ───────────────────────────────────────
 
 _IDENTIFIER_PATTERNS = [
     r"district",
@@ -39,71 +31,139 @@ _SAMPLE_METADATA_PATTERNS = [
     r"number of.*surveyed",
 ]
 
-_EXPENDITURE_PATTERNS = [
-    r"\(rs\.\)",
-    r"expenditure",
-    r"rupees",
+_OOP_EXPENDITURE_PATTERNS = [
+    r"out-of-pocket expenditure",
+]
+
+_DEMOGRAPHIC_PATTERNS = [
+    r"population below age",
+    r"sex ratio of the total population",
+    r"sex ratio at birth",
+    r"births in the 5 years.*third or higher",
+]
+
+_SOCIOECONOMIC_PATTERNS = [
+    r"attended school",
+    r"literate",
+    r"years of schooling",
+    r"married before age",
+    r"health insurance",  # Also access, but strongly socioeconomic context
+]
+
+_HOUSEHOLD_ENV_PATTERNS = [
+    r"electricity",
+    r"drinking-water",
+    r"sanitation",
+    r"clean fuel",
+    r"iodized salt",
+]
+
+_ACCESS_SYSTEM_PATTERNS = [
+    r"health facility",
+    r"institutional birth",
+    r"health worker ever talked",
+    r"postnatal care from a doctor",
+    r"births attended by skilled",
+    r"received most of their vaccinations",
+    r"taken to a health facility",
 ]
 
 
 def classify_columns(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Classify every column into a preliminary role.
-
-    Returns a DataFrame with columns: [column, role, rationale].
+    Classify every column into a preliminary semantic role.
+    
+    Returns a DataFrame with columns:
+    [column, basic_role, indicator_type, is_contextual, is_substantive_health, is_health_system, is_demographic, is_socioeconomic]
     """
-    records: List[Dict[str, str]] = []
+    records: List[Dict[str, Any]] = []
 
     for col in df.columns:
         col_lower = col.lower().strip()
-        role = "UNKNOWN"
-        rationale = ""
-
+        
+        # Defaults
+        basic_role = "UNKNOWN"
+        indicator_type = "unknown"
+        is_contextual = False
+        is_substantive_health = False
+        is_health_system = False
+        is_demographic = False
+        is_socioeconomic = False
+        
         # 1. Identifiers
-        if any(re.search(p, col_lower) for p in _IDENTIFIER_PATTERNS):
-            if "district" in col_lower or "state" in col_lower:
-                role = "IDENTIFIER"
-                rationale = "Name contains district/state keyword"
-
+        if any(re.search(p, col_lower) for p in _IDENTIFIER_PATTERNS) and ("district" in col_lower or "state" in col_lower):
+            basic_role = "IDENTIFIER"
+            indicator_type = "identifier"
+            
         # 2. Sample metadata
         elif any(re.search(p, col_lower) for p in _SAMPLE_METADATA_PATTERNS):
-            role = "SAMPLE_METADATA"
-            rationale = "Survey sample size variable"
-
-        # 3. Expenditure (Rs.)
-        elif any(re.search(p, col_lower) for p in _EXPENDITURE_PATTERNS):
-            role = "STATISTICAL_METADATA"
-            rationale = "Monetary expenditure in Rupees — different unit/scale"
-
-        # 4. Sex ratio (per 1,000 males) — not a percentage
-        elif "sex ratio" in col_lower:
-            role = "HEALTH_INDICATOR"
-            rationale = "Sex ratio (per 1,000 males) — different scale from %"
-
-        # 5. Percentage indicator — the bulk of columns
+            basic_role = "SAMPLE_METADATA"
+            indicator_type = "survey_metadata"
+            
+        # 3. Out of pocket expenditure (Explicit correction: Health System / Access)
+        elif any(re.search(p, col_lower) for p in _OOP_EXPENDITURE_PATTERNS):
+            basic_role = "HEALTH_SYSTEM"
+            indicator_type = "access_affordability"
+            is_health_system = True
+            
+        # 4. Demographics
+        elif any(re.search(p, col_lower) for p in _DEMOGRAPHIC_PATTERNS):
+            basic_role = "CONTEXTUAL"
+            indicator_type = "demographic"
+            is_contextual = True
+            is_demographic = True
+            
+        # 5. Socioeconomic / Education
+        elif any(re.search(p, col_lower) for p in _SOCIOECONOMIC_PATTERNS):
+            basic_role = "CONTEXTUAL"
+            indicator_type = "socioeconomic"
+            is_contextual = True
+            is_socioeconomic = True
+            
+        # 6. Household Environment
+        elif any(re.search(p, col_lower) for p in _HOUSEHOLD_ENV_PATTERNS):
+            basic_role = "CONTEXTUAL"
+            indicator_type = "household_environment"
+            is_contextual = True
+            
+        # 7. Healthcare Access / System
+        elif any(re.search(p, col_lower) for p in _ACCESS_SYSTEM_PATTERNS):
+            basic_role = "HEALTH_SYSTEM"
+            indicator_type = "access_utilization"
+            is_health_system = True
+            
+        # 8. Substantive Health Outcomes / Behaviors (The rest of the % indicators)
         elif col_lower.endswith("(%)") or "(%" in col_lower:
-            role = "HEALTH_INDICATOR"
-            rationale = "Percentage-based health/nutrition indicator"
-
-        # 6. Fallback for numeric columns
+            basic_role = "SUBSTANTIVE_HEALTH"
+            is_substantive_health = True
+            
+            # Sub-classify outcomes vs behaviors/coverage
+            if any(k in col_lower for k in ["anaemic", "stunted", "wasted", "underweight", "overweight", "bmi", "blood sugar", "blood pressure", "diarrhoea", "ari "]):
+                indicator_type = "health_outcome"
+            elif any(k in col_lower for k in ["vaccin", "bcg", "polio", "dpt", "measles", "rotavirus", "hepatitis", "received", "consumed iron", "check-up", "examination"]):
+                indicator_type = "coverage"
+            elif any(k in col_lower for k in ["use", "tobacco", "alcohol", "breastfed", "diet", "family planning", "sterilization", "pill", "condom", "iud"]):
+                indicator_type = "behavior"
+            else:
+                indicator_type = "other_health"
+                
+        # 9. Fallback
         elif df[col].dtype in ("float64", "int64"):
-            role = "UNKNOWN"
-            rationale = "Numeric column with no clear unit marker in header"
-
-        else:
-            role = "UNKNOWN"
-            rationale = "Cannot classify from header alone"
-
-        records.append({"column": col, "role": role, "rationale": rationale})
+            basic_role = "UNKNOWN"
+            indicator_type = "numeric_unknown"
+            
+        records.append({
+            "column": col,
+            "basic_role": basic_role,
+            "indicator_type": indicator_type,
+            "is_contextual": is_contextual,
+            "is_substantive_health": is_substantive_health,
+            "is_health_system": is_health_system,
+            "is_demographic": is_demographic,
+            "is_socioeconomic": is_socioeconomic,
+        })
 
     return pd.DataFrame(records)
 
-
-def get_columns_by_role(
-    classification: pd.DataFrame,
-    role: str,
-) -> List[str]:
-    """Return column names for a given role."""
-    return classification.loc[
-        classification["role"] == role, "column"
-    ].tolist()
+def get_columns_by_role(classification: pd.DataFrame, role: str) -> List[str]:
+    return classification.loc[classification["basic_role"] == role, "column"].tolist()
